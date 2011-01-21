@@ -8,7 +8,11 @@ A tool to allow the visual construction of process networks. Requires Python 2.6
 
 To run from python command line:
     python builder.py
-    
+
+If you get an error stating that there is 'no appropriate 64-bit architecture' when using OS X, then force python to run in 32 bit mode by issuing the command:
+    VERSIONER_PYTHON_PREFER_32_BIT=yes python builder.py 
+
+
 Day-to-day testing focuses on Mac OS X, but the software has been run on Windows and Linux previously.
 
 Drawing performance is slow on Windows due to the implementation wx uses for GraphicsContext - mitigating this is on the todo list, but it remains a known issue.

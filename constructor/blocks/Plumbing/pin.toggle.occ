@@ -1,0 +1,23 @@
+name: pin.toggle
+requires:
+ - plumbing
+
+params:
+ - type: int
+   name: pin
+   desc: The (digital) Arduino pin we want to drive.
+ - type: LEVEL
+   name: initial.level
+   desc: Initial level, either LOW or HIGH.
+
+input:
+ - name: in
+   type: SIGNAL
+   generictype:
+   desc: Should receive a signal when pin should be toggeled
+
+output:
+
+desc: >
+  Drives a pin alternately LOW and HIGH.
+  Upon request, alternates the level of a pin from LOW to HIGH.

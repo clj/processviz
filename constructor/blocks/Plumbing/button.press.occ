@@ -1,0 +1,22 @@
+name: button.press
+requires:
+ - plumbing
+
+params:
+ - type: int
+   name: pin
+   desc: The Arduino pin that the button is connected to
+
+input:
+
+output:
+ - name: out
+   type: SIGNAL
+   generictype:
+   desc: A signal when the button connected to pin is pressed
+
+desc: >
+  Watches for button presses on external level interrupt pins.
+  When a button is pressed a SIGNAL is generated. Uses digital.input,
+  debounce, and level.to.signal.
+
